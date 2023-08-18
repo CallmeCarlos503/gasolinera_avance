@@ -7,8 +7,12 @@ environment:
   sdk: '>=3.0.6 <4.0.0'
 
 dependencies:
+  flutter_hooks: ^0.18.0
+  hooks_riverpod: ^2.3.7
+  carousel_slider: ^4.2.1
   flutter:
     sdk: flutter
+    
 
 dev_dependencies:
   flutter_test:

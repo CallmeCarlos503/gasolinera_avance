@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class Principal extends StatelessWidget {
   const Principal({Key? key}) : super(key: key);
@@ -50,17 +51,55 @@ Widget Cuerpo() {
 Widget Conceptos() {
   return Center(
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Column(
           children: [
             Text(
-              'GASOLINERIA PUMA',
+              'GASOLINERA PUMA',
               style: TextStyle(color: Colors.white, fontSize: 40),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Precios del ayer y hoy',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                )
+              ],
+            ),
+            Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 5.0),
+                )
+              ],
+            ),
+            Lista(),
           ],
-        )
+        ),
       ],
     ),
+  );
+}
+
+Widget Lista() {
+  return Column(
+    children: <Widget>[
+      CarouselSlider(
+        options: CarouselOptions(height: 400.0, autoPlay: true),
+        items: [1, 2, 3, 4, 5, 6].map((i) {
+          return Builder(
+            builder: (BuildContext context) {
+              return Container(
+                width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+                decoration: BoxDecoration(color: Colors.white),
+                child: Image.asset('assets/gasolinera.png'),
+              );
+            },
+          );
+        }).toList(),
+      )
+    ],
   );
 }
