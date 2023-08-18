@@ -63,7 +63,7 @@ class login extends StatelessWidget {
                       child: TextField(
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: 'Carlosgeek503@gmail.com',
+                          hintText: 'Carlossanz503@gmail.com',
                           hintStyle: TextStyle(color: Colors.white),
                           labelText: 'Agregue su usuario',
                           labelStyle: TextStyle(color: Colors.white),
